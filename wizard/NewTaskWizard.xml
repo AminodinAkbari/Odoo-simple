@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_new_task_wizard_form" model="ir.ui.view">
+        <field name="name">todo.task.wiz.form</field>
+        <field name="model">todo.task.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Create New Task">
+                <group>
+                            <field name="name" widget="char_emojis" style="font-size:24px;"  />
+                            <field name="priority" />
+                            <field name="user"  widget="many2one_tags" />   
+                            <field name="done" />
+                </group>
+                <footer>
+                    <button name="action_create_task_in_db" type="object" string="Create" class="btn-success" />
+                    <button string="Cancel" class="btn-danger" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_new_task_wizard" model="ir.actions.act_window">
+        <field name="name">Create Task</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">todo.task.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_new_task_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

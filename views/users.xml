@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="user_tree" model="ir.ui.view">
+        <field name="name">todo.users.tree</field>
+        <field name="model">todo.users</field>
+        <field name="arch" type="xml">
+            
+            <tree>
+                <field name="name" />
+                <field name="family" />
+            </tree>
+        </field>
+
+    </record>
+
+
+
+
+    <record id="user_form" model="ir.ui.view">
+        <field name="name">todo.users.form</field>
+        <field name="model">todo.users</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                <group>
+                    <!-- <div style="color:blue"> -->
+                    <group>
+                            <field name="name" />
+                            <field name="family" />
+                    </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="user_action" model="ir.actions.act_window">
+        <field name="name">Create New Task</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">todo.users</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Student Document Text !!! 
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="user_root" name="Users" action="task_action" sequence="-10" />
+
+</odoo>
