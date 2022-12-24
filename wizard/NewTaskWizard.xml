@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <form string="Create New Task">
                 <group>
-                            <field name="name" widget="char_emojis" style="font-size:24px;"  />
+                            <field name="name" widget="char_emojis"/>
                             <field name="priority" />
                             <field name="user"  widget="many2one_tags" />   
                             <field name="done" />

@@ -38,7 +38,7 @@
 
 
     <record id="user_action" model="ir.actions.act_window">
-        <field name="name">Create New Task</field>
+        <field name="name">Create New User</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">todo.users</field>
         <field name="view_mode">tree,form</field>
@@ -49,6 +49,6 @@
         </field>
     </record>
 
-    <menuitem id="user_root" name="Users" action="task_action" sequence="-10" />
+    <menuitem id="user_root" name="Users" action="user_action" sequence="-10" />
 
 </odoo>
